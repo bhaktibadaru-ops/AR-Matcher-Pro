@@ -148,7 +148,7 @@ if st.session_state.page == 'landing':
             </div>
             <h1 style="font-size: 3.5rem; color: #1e293b; margin-bottom: 0.5rem; letter-spacing: -1px;">AR Matcher <span style="color: #3b82f6;">Pro</span></h1>
             <p style="font-size: 1.2rem; color: #64748b; max-width: 600px; margin: 0 auto 3rem auto; font-weight: 400;">
-                Otomatiskan pencocokan data mutasi dengan invoice dalam hitungan detik. Bebaskan kepala lo dari pusingnya nyari selisih angka!
+                Otomatiskan pencocokan data mutasi dengan invoice dalam hitungan detik. Biar sistem yang mikir, lo tinggal eksekusi.
             </p>
         </div>
     """, unsafe_allow_html=True)
@@ -185,7 +185,7 @@ if st.session_state.page == 'landing':
 
     st.markdown("""
         <div style="text-align: center; margin-top: 80px; padding: 25px; color: #94a3b8; font-size: 0.95rem; border-top: 1px solid rgba(226, 232, 240, 0.6); font-weight: 500;">
-            Crafted with 💡 by <b style="color: #64748b;">Bhakti</b> for <b style="color: #64748b;">Trijayatama</b>
+            Made to simplify work &bull; By <b style="color: #64748b;">Bhakti</b> &bull; Exclusive For <b style="color: #64748b;">Trijayatama</b>
         </div>
     """, unsafe_allow_html=True)
 
@@ -200,7 +200,7 @@ elif st.session_state.page == 'app':
             <div style="display: flex; gap: 15px; align-items: center;">
                 <div style="text-align: right; background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(10px); padding: 10px 18px; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 15px rgba(0,0,0,0.02); font-size: 0.85rem; color: #64748b;">
                     <span style="font-weight: 400;">Crafted with 💡 by</span> <b style="color: #3b82f6; font-size: 0.9rem;">Bhakti</b><br>
-                    <span style="font-weight: 400;">for</span> <b style="color: #1e293b; font-size: 0.9rem;">Trijayatama</b>
+                    <span style="font-weight: 400;">Exclusive For</span> <b style="color: #1e293b; font-size: 0.9rem;">Trijayatama</b>
                 </div>
             </div>
         </div>
