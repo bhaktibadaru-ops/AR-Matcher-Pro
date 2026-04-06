@@ -148,7 +148,7 @@ if st.session_state.page == 'landing':
             </div>
             <h1 style="font-size: 3.5rem; color: #1e293b; margin-bottom: 0.5rem; letter-spacing: -1px;">AR Matcher <span style="color: #3b82f6;">Pro</span></h1>
             <p style="font-size: 1.2rem; color: #64748b; max-width: 600px; margin: 0 auto 3rem auto; font-weight: 400;">
-                Otomatiskan pencocokan data mutasi dengan invoice dalam hitungan detik. Selamat tinggal kalkulator manual!
+                Otomatiskan pencocokan data mutasi dengan invoice dalam hitungan detik. Bebaskan kepala lo dari pusingnya nyari selisih angka!
             </p>
         </div>
     """, unsafe_allow_html=True)
