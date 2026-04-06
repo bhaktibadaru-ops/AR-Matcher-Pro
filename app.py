@@ -199,7 +199,7 @@ elif st.session_state.page == 'app':
             </div>
             <div style="display: flex; gap: 15px; align-items: center;">
                 <div style="text-align: right; background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(10px); padding: 10px 18px; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 15px rgba(0,0,0,0.02); font-size: 0.85rem; color: #64748b;">
-                    <span style="font-weight: 400;">Crafted with 💡 by</span> <b style="color: #3b82f6; font-size: 0.9rem;">Bhakti</b><br>
+                    <span style="font-weight: 400;">Developed by</span> <b style="color: #3b82f6; font-size: 0.9rem;">Bhakti</b><br>
                     <span style="font-weight: 400;">Exclusive For</span> <b style="color: #1e293b; font-size: 0.9rem;">Trijayatama</b>
                 </div>
             </div>
