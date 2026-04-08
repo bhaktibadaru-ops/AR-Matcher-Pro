@@ -102,6 +102,7 @@ if 'target_val' not in st.session_state: st.session_state.target_val = 0.0
 if 'data_locked' not in st.session_state: st.session_state.data_locked = False
 if 'df' not in st.session_state: st.session_state.df = None
 if 'col_nominal' not in st.session_state: st.session_state.col_nominal = None
+if 'search_done' not in st.session_state: st.session_state.search_done = False # FLAG BARU
 
 def go_to_app(): st.session_state.page = 'app'
 def go_to_home(): st.session_state.page = 'landing'
@@ -120,6 +121,7 @@ def unlock_target():
     st.session_state.res1 = None
     st.session_state.res2_auto = None
     st.session_state.show_alt = False
+    st.session_state.search_done = False
 
 def lock_data(df_parsed, col_name):
     st.session_state.df = df_parsed
@@ -128,12 +130,14 @@ def lock_data(df_parsed, col_name):
     st.session_state.res1 = None
     st.session_state.res2_auto = None
     st.session_state.show_alt = False
+    st.session_state.search_done = False
 
 def unlock_data():
     st.session_state.data_locked = False
     st.session_state.res1 = None
     st.session_state.res2_auto = None
     st.session_state.show_alt = False
+    st.session_state.search_done = False
 
 # ==========================================
 # 3. ROUTING (LANDING PAGE VS APP PAGE)
@@ -277,6 +281,7 @@ elif st.session_state.page == 'app':
             with st.spinner("Mencari kombinasi utama & memindai alternatif... ☕"):
                 res1 = find_subset_sum(data_list, st.session_state.target_val, timeout=5.0)
                 st.session_state['res1'] = res1
+                st.session_state['search_done'] = True  # <--- INI OBATNYA BRO!
                 
                 res2_auto = None
                 if res1 and res1 != "TIMEOUT" and len(res1) > 0:
@@ -290,9 +295,11 @@ elif st.session_state.page == 'app':
                 st.balloons()
 
         # --- TAMPILAN HASIL OPSI 1 ---
-        if st.session_state.get('res1'):
+        if st.session_state.get('search_done'):
             if st.session_state['res1'] == "TIMEOUT":
                 st.error("⏳ Pencarian terlalu lama (Timeout). Data terlalu banyak atau tidak ada kecocokan pas.")
+            elif not st.session_state['res1']:  # <--- INI PESAN ERROR KALAU ZONK
+                st.error("❌ **TIDAK ADA KECOCOKAN!**\nSistem tidak menemukan kombinasi angka dari invoice yang dijumlahkan hasilnya sama persis dengan Target. Coba cek lagi datanya, mungkin ada selisih biaya admin, atau ada invoice yang belum di-paste.")
             else:
                 st.markdown("<br>", unsafe_allow_html=True)
                 
